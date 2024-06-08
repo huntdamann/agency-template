@@ -17,23 +17,26 @@
 
     <title>Document</title>
   </head>
-  <body class="m-0 flex flex-col bg-black p-0">
+  <body class="m-0 font-main flex flex-col bg-black p-0">
     <header
-      class="fixed left-[1.5rem] z-[999] mt-2 flex h-[4rem] w-[20rem] items-center justify-between rounded-full border-b-white bg-red-900 samsung:left-[3rem] mobile-2:left-[3rem]"
+      class="fixed small:bg-blue-500 small:left-[1rem] left-[1.5rem] z-[999] mt-2 flex h-[4rem] small:w-[18rem] w-[20rem] items-center justify-between rounded-full border-b-white bg-red-900 samsung:left-[3rem] mobile-2:left-[3rem]"
     >
-      <div class="ml-3 p-2 text-red-800">
-        <div class="h-[3rem] w-[3rem]">
+      <div class="ml-3 small:w-[10rem] text-white p-2">
+        <div class="flex gap-2 h-[3rem] w-[3rem]">
           <img class="h-full w-full" src="./src/img/Emblem.png" alt="" />
+          <span>Brand Name</span>
         </div>
       </div>
 
-      <div id="contact-btn" class="mr-10 border-2 p-2 text-white">Hamburger</div>
+      <div id="contact-btn" class="mr-10 border-2 p-2 text-white">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
 
     <main class="mt-[6rem]">
       <!--Hero Section-->
       <section
-        class="relative flex h-[20rem] flex-col items-center overflow-hidden border-[5px] border-white bg-black text-center"
+        class="relative flex h-[20rem] flex-col items-center overflow-hidden border-white bg-black text-center"
       >
         <img class="absolute bottom-0" src="./src/img/city-skyline.png" alt="" />
         <div class="relative top-[3.25rem] z-50 flex items-center gap-3">
@@ -58,28 +61,33 @@
 
           <span class="text-3xl font-[500]">Brand Name</span>
         </div>
-        <span class="w-[51.25rem] border text-[0.9rem] mobile:w-[17.25rem]">
+        <span class="w-[51.25rem] small:w-[14.5rem]  text-[0.9rem] mobile:w-[17.25rem]">
           Brand Name is a brand and digital marketing agency stationed in Dallas, Texas and Atlanta, Georgia. Our
           passion is being of service to others. We take pride in going the extra mile to connect
           <strong>small</strong> and <strong>medium-sized</strong> companies with their target audience.
         </span>
-        <span class="border text-[0.9rem] samsung:w-[17.25rem] mobile-2:w-[17.25rem]"
+        <span class="text-[0.9rem] samsung:w-[17.25rem] mobile-2:w-[17.25rem]"
           >We understand that each brand and business we work with is unique, so we ensure a trustworthy, reliable
           partnership to create a superb strategy to meet your specific needs.
         </span>
       </section>
       <!-- Subway Station-->
       <section class="flex h-[20rem] flex-col items-center justify-center bg-black">
-        <div class="border-[4px] border-blue-500 bg-white p-3">Subway Station Here</div>
+        <div class="border-[4px] border-blue-500 bg-white p-3">Subway Station</div>
       </section>
 
       <!--  Testimonials   -->
-      <section class="flex flex-row gap-5 border-[5px] bg-gray-100 p-10 mobile:flex-col">
+      <section class="flex flex-row small:flex-col gap-5 border-[5px] bg-gray-100 p-10 mobile:flex-col">
         <!-- Rating -->
         <div class="flex flex-col items-center gap-4">
-          <div class="font-900 text-7xl">4.8/5</div>
+          <div class="font-900 text-7xl">4/5</div>
           <span class="text-gray-500">Based on 44 reviews on Clutch & Google Reviews</span>
-          <span style="background-image: url(./src/img/star.png)" class="h-24 w-24 bg-star-icon"></span>
+          <div>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
         </div>
         <div class="object-fit flex flex-col">
           <span class="object-contain p-5 text-4xl font-[650]">Choose a trusted partner with years of experience</span>
@@ -87,7 +95,7 @@
             >We helped many small, medium, and large companies with their struggle in building successful remote
             software development teams or the whole IT hubs located in Poland.</span
           >
-          <div class="flex items-center justify-evenly border bg-white object-fill p-10 mobile:flex-col mobile:p-5">
+          <div class="flex items-center small:flex-col justify-evenly border bg-white object-fill p-10 mobile:flex-col mobile:p-5">
             <img
               class="w-24"
               src="./src/img/vecteezy_abstract-geometric-logo-or-infinity-line-logo-for-your-company_8214517.jpg"
@@ -95,7 +103,7 @@
             />
             <img
               class="w-24"
-              src="./src/img/vecteezy_abstract-geometric-logo-or-infinity-line-logo-for-your-company_8214517.jpg"
+              src="./src/img/brand.png"
               alt="logo"
             />
             <img
@@ -115,8 +123,8 @@
       </section>
 
       <!-- Our Services-->
-      <section class="flex items-center gap-8 border-[5px] bg-gray-700 pt-3 mobile:flex-col">
-        <span class="text-xl">Our Services</span>
+      <section class="flex small:flex-col text-slate-50 items-center gap-8 border-[5px] bg-gray-700 pt-3 mobile:flex-col">
+        <span class="text-xl text-slate-50">Our Services</span>
 
         <span class="text-2xl font-[600]">Brand Marketing</span>
 

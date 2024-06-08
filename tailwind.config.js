@@ -3,12 +3,17 @@ module.exports = {
   content: ['./**/*.{html,js}', './src/**/*.{html,js}'],
   theme: {
     screens: {
-      mobile: '375px',
+      'mobile': '375px',
 
       'mobile-2': '414px',
-      samsung: '412px',
+      'samsung': '412px',
+      'small': '320px'
     },
     extend: {
+      fontFamily: {
+
+        'main':['Roboto', 'sans-serif']
+      },
       colors: {
         'logo-red': '#D72323',
       },
