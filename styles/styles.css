@@ -2,10 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.menu {
+  @apply top-0 left-0 animate-open z-40 absolute w-full h-screen text-white flex-col items-center justify-center bg-gradient-to-t from-bg-purple to-bg-pink hidden;
+}
+.showMenu {
+  @apply flex;
+}
+
+.menu__dropdown-agency {
+  @apply text-[2rem] flex-col flex;
+}
+.showAgency {
+  @apply flex;
+}
+
+.menu__dropdown-work {
+  @apply text-[2rem] flex-col ease-in duration-500  hidden;
+}
+
+.showWork {
+  @apply flex;
+}
+
+.navbar {
+  @apply flex flex-row justify-between p-1 relative;
+}
+.under-construct {
+  @apply flex flex-col text-white bottom-[2rem] items-center text-center w-[16rem];
+}
 .show {
   @apply flex font-mono text-5xl font-bold text-white opacity-100 transition-all duration-500 ease-out;
 }
-
+ 
 .logo-text {
   @apply hidden font-mono;
 }

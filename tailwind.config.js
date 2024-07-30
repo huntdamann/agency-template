@@ -10,15 +10,30 @@ module.exports = {
       'small': '320px'
     },
     extend: {
+      animation: {
+        open: 'open .5s ease-in',
+      },
+      keyframes: {
+        open: {
+
+          '0%': { opacity: '0', transform: 'translateX(-300px)' },
+          '100%': { opacity: '1', transform: 'translateX(0px)' }
+
+
+        },
+      },
       fontFamily: {
 
-        'main':['Roboto', 'sans-serif']
+        'main': ['Roboto', 'sans-serif']
       },
       colors: {
         'logo-red': '#D72323',
+        'bg-purple': '#473191',
+        'bg-pink': '#9D288E',
       },
       backgroundImage: {
-        'star-icon': "url('https://img.icons8.com/?size=100&id=qdQpy48X3Rjv&format=png&color=000000')",
+        'star-icon': "url(./src/img/brand.png)",
+        'wall-paper': "url('./src/img/brand.png')",
       },
     },
   },

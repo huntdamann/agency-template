@@ -2,7 +2,7 @@
   "devDependencies": {
     "prettier": "^3.3.1",
     "prettier-plugin-tailwindcss": "^0.6.1",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.7"
   },
   "scripts": {
     "dev": "npx tailwindcss -i ./styles/styles.css -o ./styles/output.css --watch",
