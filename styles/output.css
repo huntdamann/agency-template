@@ -658,7 +658,6 @@ video {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -2506,9 +2505,11 @@ video {
 }
 
 .menu__dropdown-agency {
-  display: flex;
+  display: none;
   flex-direction: column;
   font-size: 2rem;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .showAgency {

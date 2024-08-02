@@ -2,7 +2,9 @@ console.log('Hello WOld ');
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const workDropDown = document.querySelector('.menu__dropdown-work');
+const agencyDropDown = document.querySelector('.menu__dropdown-agency');
 const tab = document.querySelector('.tab');
+const tab1 = document.querySelector('.tab-1');
 const n = document.getElementById('name');
 const n_two = document.getElementById('name-2');
 
@@ -21,6 +23,20 @@ function dropDown() {
     workDropDown.classList.toggle('showWork');
     console.log('Show Work Dropdown');
     workmenuOpen = 0;
+  }
+
+}
+function dropDown_Agency() {
+
+  if (agencymenuOpen == 0) {
+    agencyDropDown.classList.toggle('showAgency');
+    console.log('Show Agency Dropdown');
+    agencymenuOpen = 1;
+  }
+  else {
+    agencyDropDown.classList.toggle('showAgency');
+    console.log('Close Agency Dropdown');
+    agencymenuOpen = 0;
   }
 
 }
@@ -44,4 +60,5 @@ function mouseOver() {
 
 menuBtn.addEventListener('click', mouseOver);
 tab.addEventListener('click', dropDown);
+tab1.addEventListener('click', dropDown_Agency)
 

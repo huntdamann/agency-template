@@ -10,7 +10,7 @@
 }
 
 .menu__dropdown-agency {
-  @apply text-[2rem] flex-col flex;
+  @apply text-[2rem] flex-col ease-in duration-500 hidden;
 }
 .showAgency {
   @apply flex;
