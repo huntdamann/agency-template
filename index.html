@@ -41,7 +41,7 @@
 
 
     .menu-btn {
-      position: relative;
+      position: fixed;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,6 +52,7 @@
       margin-right: 1rem;
       margin-top: 0.5rem;
       z-index: 50;
+      right: 0;
 
     }
 
@@ -306,8 +307,8 @@
 
 
           </li>
-          <li class="tab">contact</li>
-          <li class="tab">blog</li>
+          <a href="./src/pages/contact.html" class="tab">contact</a>
+          <a class="tab">blog</a>
 
         </div>
 
@@ -332,8 +333,34 @@
 
 
 
-  <footer class="">
+  <footer style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; background-color: #6E21AB; padding: 1rem; margin-top: 3rem;" class="footer">
 
+
+    <span style="font-size: 1.5rem;">connect</span>
+    <div style="display: flex; gap: 2rem; align-items: center; justify-content: center;">
+      <a href="#">Contact Us</a>
+      <a href="#">Blog</a>
+      
+    </div>
+    <div class="social-handles">
+
+      <i class="fa-brands fa-square-facebook"></i>
+      <i class="fa-brands fa-square-twitter"></i>
+      <i class="fa-brands fa-square-instagram"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-square-pinterest"></i>
+     
+    </div>
+    
+   
+
+    <div style="display: flex; width: 22rem; font-size: .8rem; justify-content: center;">
+
+      <span>All Rights Reserved ® | Powered by Metro Media Agency</span>
+
+    </div>
+
+    
   </footer>
 </body>
 <script src="./src/js/mouse-events.js"></script>

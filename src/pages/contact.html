@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../../styles/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Metro Media</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Kanit", sans-serif;
+    }
+
+    .custom-bg {
+      background-image: url('../img/design-2.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+
+      position: relative;
+    }
+    .dark-overlay {
+
+        position: absolute;
+        background-color: hsla(0, 100%, 0%, .8);
+    
+        width: 100%;
+        height: 100vh;
+    }
+
+    
+
+    .dropdown {
+       
+        border-radius: 1rem;
+        position: relative;
+        display: none;
+        top: 10rem;
+        left: 2rem;
+        width: 20rem;
+        height: 20rem;
+        background-color: #6E21AB;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        overflow: hidden;
+        font-size: 1rem;
+       
+      
+        
+    }
+    .dropin {
+
+        border: 1px red solid;
+        border-radius: 1rem;
+        position: relative;
+        display: none;
+        top: 20rem;
+        left: 2rem;
+        width: 20rem;
+        height: 20rem;
+        background-color: #6E21AB;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        overflow: hidden;
+        font-size: 1rem;
+    }
+    .show {
+        display: flex;
+        flex-direction: column;
+        animation: contact 1s ease-in;
+    }
+
+    .menu-btn {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+      z-index: 50;
+      right: 0;
+
+    }
+
+    .menu-btn__burger {
+      /*Change the length of line burger icon */
+      width: 40px;
+      /*Change the height of line in burger icon*/
+      height: 4px;
+      background: white;
+      margin-right: 1rem;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+    }
+
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      /*Change the length of line burger icon */
+      width: 40px;
+      /*Change the height of line in burger icon*/
+      height: 4px;
+      background: white;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+
+    }
+
+    .menu-btn__burger::before {
+      transform: translateY(-16px);
+    }
+
+    .menu-btn__burger::after {
+      transform: translateY(1rem);
+    }
+
+    /* Animation Burger */
+
+
+    .menu-btn.open .menu-btn__burger {
+
+      background: transparent;
+      transform: translateX(-40px);
+    }
+
+    .menu-btn.open .menu-btn__burger::before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    .menu-btn.open .menu-btn__burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    .logo {
+      -webkit-animation: spin .4s linear;
+      -moz-animation: spin .4s linear;
+      -o-animation: spin .4s linear;
+      animation: spin .4s linear;
+    }
+
+    .logo-text-1,
+    .logo-text-2 {
+      font-family: 'Kanit', sans-serif;
+      color: white;
+    }
+
+    .logo-text-1 {
+
+      animation: slide-out .5s linear;
+
+    }
+
+    .logo-text-2 {
+      animation: slide-out-2 .5s linear;
+    }
+
+    .tab {
+      opacity: 0.8;
+      transition: 0.3s;
+
+    }
+
+    .tab:hover {
+      transition: 0.3s;
+      opacity: 1;
+    }
+
+    @-webkit-keyframes contact {
+        
+        0% {
+            transform: translateY(300px) scale(0.3);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes contact {
+        
+        0% {
+            transform: translateY(300px) scale(0.3);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @-o-keyframes contact {
+        
+        0% {
+            transform: translateY(300px) scale(0.3);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes contact {
+        
+        0% {
+            transform: translateY(300px) scale(0.3);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @-moz-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @-o-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes slide-out {
+      0% {
+
+        transform: translateX(-50px);
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @-webkit-keyframes slide-out {
+      0% {
+
+        transform: translateX(0px);
+      }
+
+      100% {
+        transform: translateX(50px);
+      }
+    }
+
+
+    @-moz-keyframes slide-out {
+      0% {
+
+        transform: translateX(0px);
+      }
+
+      100% {
+        transform: translateX(50px);
+      }
+    }
+
+    @-o-keyframes slide-out {
+      0% {
+
+        transform: translateX(0px);
+      }
+
+      100% {
+        transform: translateX(50px);
+      }
+    }
+
+    @keyframes slide-out-2 {
+      0% {
+
+        transform: translateX(-75px);
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @-webkit-keyframes slide-out-2 {
+      0% {
+
+        transform: translateX(-75px);
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+
+    @-moz-keyframes slide-out-2 {
+      0% {
+
+        transform: translateX(-75px);
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @-o-keyframes slide-out-2 {
+      0% {
+
+        transform: translateX(-75px);
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+  </style>
+
+</head>
+
+<body class="custom-bg">
+
+  <header>
+
+    <!--Navigation Bar-->
+    <nav class="navbar">
+
+      <a href="../../index.html"> 
+        <div class="logo" style="z-index: 30; width: 3rem; height: 3rem; margin-top: 1rem; margin-left: 0.5rem;"><img
+            src="../img/half-logo.png" alt="Logo">
+  
+  
+        </div>
+        <div style="width: 2.5rem; height: 2.5rem; position: absolute; left: 3.25rem; top: 1rem;">
+          <img src="../img/half-logo-2.png" alt="Logo-text">
+        </div>
+
+
+      </a>
+
+      <ul class="menu">
+        <div
+          style="font-size: 2.8rem; width: 100%; height: 100%; margin-top: 1.5rem; gap: 1.5rem; display: flex; flex-direction: column; align-items: center; font-weight: 700;">
+          <li style="text-align: center;">
+            <span class="tab">work</span>
+            <ul class="menu__dropdown-work">
+              <li>experience</li>
+              <li>case studies</li>
+            </ul>
+          </li>
+          <li style="text-align: center;">
+            <span class="tab-1">agency</span>
+            <ul class="menu__dropdown-agency">
+              <li>about</li>
+              <li>faces of metro media</li>
+              <li>culture</li>
+              
+            </ul>
+
+
+          </li>
+          <li class="tab">contact</li>
+          <li class="tab">blog</li>
+
+        </div>
+
+      </ul>
+      <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="dark-overlay">
+
+    <div style="color: white;" class="contact">
+
+        <div class="dropdown">
+
+            <span>Contact Us</span>
+            <div class="social-handles">
+
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-pinterest"></i>
+               
+              </div>
+            <span>Let's talk about your project</span>
+            <span>Drop us a line through the form below and we'll get back to you</span>
+            <span>Include scheduling functionality here</span>
+
+        </div>
+
+        <div class="dropin">
+
+                hhhh
+        </div>
+       
+
+        
+
+        
+    </div>
+  </div>
+
+</body>
+<script src="../js/mouse-events.js"></script>
+<script src="../js/contact.js"></script>
+
+</html>

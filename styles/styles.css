@@ -25,7 +25,7 @@
 }
 
 .navbar {
-  @apply flex flex-row justify-between p-1 relative;
+  @apply flex flex-row justify-between p-1 relative z-50;
 }
 .under-construct {
   @apply flex flex-col text-white bottom-[2rem] items-center text-center w-[16rem];
